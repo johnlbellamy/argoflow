@@ -10,7 +10,6 @@ spec:
     targetRevision: 123456789012/my-cluster.my-domain.com
     path: distribution/certificates/overlays/imported
     kustomize:
-      version: v4.0.5
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
