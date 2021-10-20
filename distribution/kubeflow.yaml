@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/johnlbellamy/argoflow
+    repoURL: https://github.com/johnlbellamy/argoflow/distribution
     targetRevision: 123456789012/my-cluster.my-domain.com
     path: ./distribution
     kustomize:
