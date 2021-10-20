@@ -6,11 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://gitlab.mycompany.com/argoflow-aws-initialised.git
-    targetRevision: 123456789012/my-cluster.my-domain.com
+    repoURL: https://github.com/johnlbellamy/argoflow
     path: distribution/kubeflow/profiles
     kustomize:
-      version: v4.0.5
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:

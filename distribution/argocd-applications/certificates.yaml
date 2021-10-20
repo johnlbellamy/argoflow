@@ -6,8 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://gitlab.mycompany.com/argoflow-aws-initialised.git
-    targetRevision: 123456789012/my-cluster.my-domain.com
+    repoURL: https://github.com/johnlbellamy/argoflow
     path: distribution/certificates/base
     kustomize:
   destination:
