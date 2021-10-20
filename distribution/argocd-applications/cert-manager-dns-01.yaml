@@ -10,7 +10,6 @@ spec:
     targetRevision: 123456789012/my-cluster.my-domain.com
     path: distribution/cert-manager/lets-encrypt-dns-01
     kustomize:
-      version: v4.0.5
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
