@@ -7,10 +7,9 @@ spec:
   project: default
   source:
     repoURL: https://github.com/johnlbellamy/argoflow
-    targetRevision: 123456789012/my-cluster.my-domain.com
     path: ./distribution
     kustomize:
-      version: v4.4.0
+      version: v4.0.5
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
