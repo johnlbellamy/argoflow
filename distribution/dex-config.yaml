@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  static_email: none@none.com
+  static_password_hash: 
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: dex-config

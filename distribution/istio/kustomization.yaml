@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - istio-spec.yaml
 - namespace.yaml
+- dex-config.yaml
