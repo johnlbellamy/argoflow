@@ -6,3 +6,4 @@ kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: dex-config
+  namespace: auth
