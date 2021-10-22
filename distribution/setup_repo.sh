@@ -21,6 +21,9 @@ COOKIE_SECRET=$(python3 -c 'import os,base64; print(base64.urlsafe_b64encode(os.
 OIDC_CLIENT_ID=$(python3 -c 'import secrets; print(secrets.token_hex(16))')
 OIDC_CLIENT_SECRET=$(python3 -c 'import secrets; print(secrets.token_hex(32))')
 
+echo "OIDC_CLIENT_ID=" + $OIDC_CLIENT_ID
+echo "OIDC_CLIENT_SECRET=" + $OIDC_CLIENT_SECRET
+
 kubectl create secret generic -n auth oauth2-proxy --from-literal=client-id=${OIDC_CLIENT_ID} --from-literal=client-secret=${OIDC_CLIENT_SECRET} --from-literal=cookie-secret=${COOKIE_SECRET} --dry-run=client -o yaml | kubeseal | yq eval -P > ${DISTRIBUTION_PATH}/oidc-auth/overlays/dex/oauth2-proxy-secret.yaml
 kubectl create secret generic -n auth oauth2-proxy --from-literal=client-id=${OIDC_CLIENT_ID} --from-literal=client-secret=${OIDC_CLIENT_SECRET} --from-literal=cookie-secret=${COOKIE_SECRET} --dry-run=client -o yaml | kubeseal | yq eval -P > ${DISTRIBUTION_PATH}/oidc-auth/overlays/keycloak/oauth2-proxy-secret.yaml
 
