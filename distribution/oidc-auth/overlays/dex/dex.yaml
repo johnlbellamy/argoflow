@@ -13,8 +13,7 @@ spec:
         value: "false"
       - name: configSecret.name
         value: dex-config
-    #repoURL: https://charts.dexidp.io
-    repoURL: https://github.com/johnlbellamy/argoflow/distribution/dex
+    repoURL: https://github.com/johnlbellamy/dex-fix/tree/main/dex
     targetRevision: 0.4.0
   destination:
     namespace: auth
