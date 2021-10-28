@@ -13,7 +13,7 @@ spec:
         value: "false"
       - name: configSecret.name
         value: dex-config
-    repoURL: https://github.com/johnlbellamy/dex-fix
+    repoURL: https://raw.githubusercontent.com/johnlbellamy/dex-fix/master
     targetRevision: 0.4.0
   destination:
     namespace: auth
