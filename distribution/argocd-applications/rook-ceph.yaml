@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/johnlbellamy/argoflow/distribution
-    path: rook-ceph
+    repoURL: https://github.com/johnlbellamy/argoflow
+    path: distirbution/rook-ceph
     kustomize:
   destination:
     server: https://kubernetes.default.svc
