@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/johnlbellamy/argoflow
-    path: distirbution/rook-ceph
+    path: distribution/rook-ceph
     kustomize:
   destination:
     server: https://kubernetes.default.svc
