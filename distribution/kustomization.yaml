@@ -5,7 +5,7 @@ resources:
 ## Common
 #- argocd-applications/metallb.yaml
 - argocd-applications/rook-ceph.yaml
-# - argocd-applications/nginx.yaml
+- argocd-applications/nginx.yaml
 # - argocd-applications/nvidia-gpu-operator.yaml
 - argocd-applications/istio-operator.yaml
 - argocd-applications/istio.yaml    
