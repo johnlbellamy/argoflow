@@ -4,4 +4,4 @@ metadata:
   name: profiles-config
   namespace: kubeflow
 data:
-  ADMIN: "johnb@k3s.com"
+  ADMIN: "none@none.com"
