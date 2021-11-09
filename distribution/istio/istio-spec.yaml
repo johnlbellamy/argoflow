@@ -4,9 +4,29 @@ metadata:
   namespace: istio-system
   name: istio
 spec:
-  profile: default
   tag: 1.10.1 # istio/operator
   hub: docker.io/istio
+  traffic_management:
+    components:
+      namespace: istio-system
+  policy:
+    components:
+      namespace: istio-system
+  telemetry:
+    components:
+      namespace: istio-system
+  config_management:
+    components:
+      namespace: istio-system
+  security:
+    components:
+      citadel:
+        namespace: istio-citadel
+      cert_manager:
+        namespace: istio-system
+      node_agent:
+        namespace: istio-system
+
   meshConfig:
     accessLogFile: /dev/stdout
     enablePrometheusMerge: true
