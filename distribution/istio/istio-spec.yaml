@@ -36,23 +36,30 @@ spec:
   traffic_management:
     components:
       namespace: istio-system
+      enabled: true
   policy:
     components:
       namespace: istio-system
+      enabled: true
   telemetry:
     components:
       namespace: istio-system
+      enabled: true
   config_management:
     components:
       namespace: istio-system
+      enabled: true
   security:
     components:
       citadel:
         namespace: istio-citadel
+        enabled: true
       cert_manager:
         namespace: istio-system
+        enabled: true
       node_agent:
         namespace: istio-system
+        enabled: true
  
   values:
     sidecarInjectorWebhook:
