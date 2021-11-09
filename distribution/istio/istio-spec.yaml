@@ -4,7 +4,7 @@ metadata:
   namespace: istio-system
   name: istio
 spec:
-profile: default
+  profile: default
   tag: 1.10.1 # istio/operator
   hub: docker.io/istio
     
