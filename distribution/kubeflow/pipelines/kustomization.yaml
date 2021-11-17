@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
 #- github.com/kubeflow/pipelines/manifests/kustomize/env/platform-agnostic-multi-user-pns?ref=1c66f93f5149a8d5ed7f33895d3ebc01e662d837 # tag=1.6.0
-- github.com/johnlbellamy/pipelines/manifests/kustomize/env/platform-agnostic-multi-user-pns
+- github.com/johnlbellamy/pipelines//tree/master/manifests/kustomize/env/platform-agnostic-multi-user-pns
 images:
 - name: gcr.io/ml-pipeline/cache-deployer
   newName: gcr.io/ml-pipeline/cache-deployer
