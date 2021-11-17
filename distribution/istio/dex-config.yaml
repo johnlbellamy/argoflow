@@ -22,7 +22,7 @@ data:
       username: admin
     staticClients:
     - id: kubeflow-oidc-authservice
-      redirectURIs: ["/login/oidc"]
+      redirectURIs: ["/login/oidc", "/oauth2/callback"]
       name: 'Dex Login Application'
       secret: ZGV4LWNvbmZpZw==
 kind: ConfigMap
