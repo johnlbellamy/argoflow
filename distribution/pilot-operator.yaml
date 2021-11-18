@@ -1,0 +1,9 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  name: operator-pilot
+  namespace: istio-system
+spec:
+  components:
+    pilot:
+      enabled: true

@@ -1,0 +1,42 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: kiali
+  namespace: istio-system
+  selfLink: /api/v1/namespaces/istio-system/configmaps/kiali
+  uid: 660a2bfe-c71b-45ab-a438-ed61532dd8e3
+  resourceVersion: '31024421'
+  creationTimestamp: '2020-07-24T10:18:24Z'
+  labels:
+    app: kiali
+    operator.istio.io/component: AddonComponents
+    operator.istio.io/managed: Reconcile
+    operator.istio.io/version: 1.5.6
+    release: istio
+  annotations:
+
+data:
+  config.yaml: |
+    istio_component_namespaces:
+      grafana: istio-system
+      tracing: istio-system
+      pilot: istio-system
+      prometheus: istio-system
+    istio_namespace: istio-system
+    auth:
+      strategy: anonymous
+    deployment:
+      accessible_namespaces: ['**']
+   
+    server:
+      port: 20001
+      web_root: /kiali
+    external_services:
+      istio:
+        url_service_version: http://istio-pilot.istio-system:8080/version
+      tracing:
+        url: http://tracing.istio-system:16685/tracing
+      grafana:
+        url: http://grafana.istio-system:3000
+      prometheus:
+        url: http://prometheus.istio-system:9090
