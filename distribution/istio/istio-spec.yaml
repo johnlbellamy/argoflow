@@ -4,10 +4,9 @@ metadata:
   namespace: istio-system
   name: istio
 spec:
-  profile: default
+  profile: demo
   tag: 1.10.1 # istio/operator
   hub: docker.io/istio
-    
   meshConfig:
     accessLogFile: /dev/stdout
     enablePrometheusMerge: true
@@ -33,34 +32,6 @@ spec:
             - "accept"
         headersToUpstreamOnAllow: ["authorization", "path", "x-auth-request-user", "x-auth-request-email", "x-auth-request-access-token", "x-auth-request-user-groups"] # headers sent to backend application when request is allowed.
         headersToDownstreamOnDeny: ["content-type", "set-cookie"] # headers sent back to the client when request is denied.
-  traffic_management:
-    components:
-      namespace: istio-system
-      enabled: true
-  policy:
-    components:
-      namespace: istio-system
-      enabled: true
-  telemetry:
-    components:
-      namespace: istio-system
-      enabled: true
-  config_management:
-    components:
-      namespace: istio-system
-      enabled: true
-  security:
-    components:
-      citadel:
-        namespace: istio-citadel
-        enabled: true
-      cert_manager:
-        namespace: istio-system
-        enabled: true
-      node_agent:
-        namespace: istio-system
-        enabled: true
- 
   values:
     sidecarInjectorWebhook:
       neverInjectSelector:
