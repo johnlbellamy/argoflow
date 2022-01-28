@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/johnbellamy/argoflow/distribution/istio-git/istio'
+    repoURL: 'https://github.com/johnlbellamy/argoflow/distribution/istio-git/istio'
     targetRevision: HEAD
     path: manifests/charts/istio-operator
     helm:
