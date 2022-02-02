@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Perform a simple recursive find-and-replace on all variables defined in setup.conf
+
+export CERT=kubeseal --fetch-cert
 export SETUP_CONF_PATH=$1 # location of the setup config
 export DISTRIBUTION_PATH=./distribution # folder where the distribution's YAML files are to be found
 
@@ -31,6 +33,8 @@ KEYCLOAK_MANAGEMENT_PASS=$(python3 -c 'import secrets; print(secrets.token_hex(1
 
 kubectl create secret generic -n auth keycloak-secret --from-literal=admin-password=${KEYCLOAK_ADMIN_PASS} --from-literal=database-password=${DATABASE_PASS} --from-literal=management-password=${KEYCLOAK_MANAGEMENT_PASS} --dry-run=client -o yaml | kubeseal | yq eval -P > ${DISTRIBUTION_PATH}/oidc-auth/overlays/keycloak/keycloak-secret.yaml
 kubectl create secret generic -n auth keycloak-postgresql --from-literal=postgresql-password=${DATABASE_PASS} --from-literal=postgresql-postgres-password=${POSTGRESQL_PASS} --dry-run=client -o yaml | kubeseal | yq eval -P > ${DISTRIBUTION_PATH}/oidc-auth/overlays/keycloak/postgresql-secret.yaml
+
+
 
 read -p 'Email: ' EMAIL
 read -p 'Username: ' USERNAME
