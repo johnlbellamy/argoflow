@@ -9,6 +9,6 @@ keywords:
   - istio
 sources:
   #- http://github.com/istio/istio
-  - https://github.com/johnlbellamy/argoflow/tree/master/distribution/istio-git/istio
+  - http://github.com/johnlbellamy/argoflow/tree/master/distribution/istio-git/istio
 engine: gotpl
 icon: https://istio.io/latest/favicons/android-192x192.png
