@@ -11,6 +11,7 @@ keywords:
   - ingressgateway
   - gateways
 sources:
-  - http://github.com/istio/istio
+  #- http://github.com/istio/istio
+  - https://github.com/johnlbellamy/argoflow/distribution/istio-git/istio
 engine: gotpl
 icon: https://istio.io/latest/favicons/android-192x192.png
