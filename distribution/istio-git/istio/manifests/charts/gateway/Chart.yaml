@@ -10,7 +10,7 @@ appVersion: 1.0.0
 
 sources:
 #- http://github.com/istio/istio
-- https://github.com/johnlbellamy/argoflow/distribution/istio-git/istio
+- http://github.com/johnlbellamy/argoflow/distribution/istio-git/istio
 icon: https://istio.io/latest/favicons/android-192x192.png
 keywords:
 - istio
