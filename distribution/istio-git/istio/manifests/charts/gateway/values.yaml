@@ -50,9 +50,10 @@ service:
     protocol: TCP
     targetPort: 443
   annotations: {}
-  loadBalancerIP: ""
-  loadBalancerSourceRanges: []
-  externalTrafficPolicy: ""
+  #loadBalancerIP: ""
+  #loadBalancerSourceRanges: []
+  #externalTrafficPolicy: ""
+  clusterIP: ""
 
 resources:
   requests:
